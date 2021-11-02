@@ -16,4 +16,8 @@ export class LoginPage implements OnInit {
      this.router.navigate(['funcionalidades']);
 
   }
+
+  cadastro(){
+    this.router.navigate(['cadastro']);
+  }
 }

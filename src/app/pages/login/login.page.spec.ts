@@ -32,5 +32,10 @@ describe('LoginPage', () => {
     component.login();
     expect(router.navigate).toHaveBeenCalledWith(['funcionalidades']);
  })
- 
+  it('should go to cadastro page on cadastro', ()  => {
+    spyOn(router , 'navigate');
+    component.cadastro();
+    expect(router.navigate).toHaveBeenCalledWith(['cadastro']);
+
+  })
 });

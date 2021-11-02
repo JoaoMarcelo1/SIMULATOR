@@ -1,7 +1,9 @@
 <ion-header>
   <ion-toolbar color="success">
-    <ion-icon name="arrow-back"></ion-icon>
-    <ion-title>Cadastre-se aqui</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar-se</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -26,7 +28,7 @@
         <ion-label position="floating">senha:</ion-label>
         <ion-input type="password"></ion-input>
       </ion-item>
-      <ion-button color="success"  size="full"><b>Cadastrar</b></ion-button>
+      <ion-button color="success"  size="full" (click)="cadastro()"><b>Cadastrar</b></ion-button>
 </ion-card-content>
 
 
