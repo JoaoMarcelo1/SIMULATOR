@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
 
   constructor(private router: Router) { }
-
+  //criação das funções
   ngOnInit() {
   }
   login(){
      this.router.navigate(['funcionalidades']);
 
   }
-
+   
   cadastro(){
     this.router.navigate(['cadastro']);
   }
