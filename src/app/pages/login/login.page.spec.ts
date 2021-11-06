@@ -26,7 +26,7 @@ describe('LoginPage', () => {
     component = fixture.componentInstance;
   
   }));
-
+  //testes
  it ('should go to login page on funcionalidades', () => {
     spyOn(router , 'navigate');
     component.login();
