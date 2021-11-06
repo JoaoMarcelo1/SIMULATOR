@@ -3,9 +3,13 @@ ion-content{
 
 }
 ion-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 200px;
-    margin: 20px;
-    margin-right: 50px;
+    margin: 25px;
+    
+   
+ 
     
 }
