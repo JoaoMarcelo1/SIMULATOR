@@ -22,5 +22,12 @@ describe('loginpageform', () =>{
    
      })
 
+     it('should have email invalid if email is not valid', () => {
+        form.get('email').setValue('invalid email');
+
+        expect(form.get('email').valid).toBeFalsy();
+
+     })
+
 
 })
