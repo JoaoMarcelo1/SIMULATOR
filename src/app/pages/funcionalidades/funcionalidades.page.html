@@ -8,19 +8,31 @@
 </ion-header>
 
 <ion-content>
-  <div class="flex-center">
+
+   <div>
+     <ion-list>
+       <ion-item *ngFor="let item of items">
+         <ion-thumbnail slot="start">
+           <ion-img [src]=""></ion-img>
+            </ion-thumbnail>
+              <ion-label>{{item.text}}</ion-label>
+       </ion-item>
+     </ion-list>
+   </div>
+
+  <div>
    <ion-button color="success" size="small" size="default"><b>iniciar</b></ion-button>
   </div>
 
-  <div class="flex-center">
+  <div>
    <ion-button color="success" size="small" size="default"><b>Ranking</b></ion-button>
   </div>
 
-  <div class="flex-center">
+  <div>
    <ion-button color="success" size="small" size="default"><b>Enviar questões</b></ion-button>
   </div>
 
-  <div class="flex-center">
+  <div>
    <ion-button color="success" size="small" size="default"><b>Meus dados</b></ion-button>
   </div>
   
