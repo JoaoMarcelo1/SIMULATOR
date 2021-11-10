@@ -1,13 +1,13 @@
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { LoginPageForm } from "./login.page.form";
+import { loginPageForm } from "./login.page.form";
 
 describe('loginpageform', () =>{
-    let loginPageForm: LoginPageForm;
+    let loginPageForm: loginPageForm;
     let form: FormGroup;
 
     beforeEach(() => {
         loginPageForm = new loginPageForm(new FormBuilder());
-        form = loginPageForm.createForm();
+        form = loginPageForm.CreateForm();
     })
  
      it('should create login form empty', () =>{
