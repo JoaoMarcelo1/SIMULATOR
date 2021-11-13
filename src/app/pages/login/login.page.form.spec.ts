@@ -1,12 +1,13 @@
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { loginPageForm } from "./login.page.form";
+import { LoginPageForm } from "./login.page.form";
 
-describe('loginpageform', () =>{
-    let loginPageForm: loginPageForm;
-    let form: FormGroup;
+describe('LoginPageForm', () => {
+
+    let loginPageForm: LoginPageForm;
+    let form: FormGroup
 
     beforeEach(() => {
-        loginPageForm = new loginPageForm(new FormBuilder());
+        loginPageForm = new LoginPageForm(new FormBuilder());
         form = loginPageForm.CreateForm();
     })
  
@@ -28,6 +29,20 @@ describe('loginpageform', () =>{
         expect(form.get('email').valid).toBeFalsy();
 
      })
+     //testar a validade do email
+     it ('should have email valid if email is valid', () =>{
+       form.get('email').setValue('valid@email.com');
+       expect(form.get('email').valid).toBeTruthy();
+
+     }
+    )
+    //teste para se todos campos foram preenchidos corretamente
+    it('should have a valid form', () => {
+    form.get('email').setValue('valid@email.com');
+    form.get('password').setValue('anyPAssword');
+    expect(form.valid).toBeTruthy();
+
+    })
 
 
 })

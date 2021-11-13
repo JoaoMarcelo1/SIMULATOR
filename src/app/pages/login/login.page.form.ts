@@ -1,5 +1,5 @@
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-export class loginPageForm{
+export class LoginPageForm{
 
 
   private formBuilder : FormBuilder;

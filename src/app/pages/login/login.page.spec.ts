@@ -1,4 +1,5 @@
 import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from 'src/app/app-routing.module';
@@ -15,7 +16,8 @@ describe('LoginPage', () => {
       declarations: [ LoginPage ],
       imports: [
         IonicModule.forRoot(),
-        AppRoutingModule
+        AppRoutingModule,
+        ReactiveFormsModule
       
       
       ]
@@ -26,6 +28,13 @@ describe('LoginPage', () => {
     component = fixture.componentInstance;
   
   }));
+  //criar forms na inicialização
+  it ('should create form on init' , () => {
+    component.ngOnInit();
+    expect(component.form).not.toBeUndefined();
+
+  }
+  )
   //testes
  it ('should go to login page on funcionalidades', () => {
     spyOn(router , 'navigate');
