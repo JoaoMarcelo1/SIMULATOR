@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { loginPageForm } from './login.page.form';
+import { LoginPageForm } from './login.page.form';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   //métodos 
   ngOnInit() {
 
-    this.form = new loginPageForm(this.formBuilder).CreateForm();
+    this.form = new LoginPageForm(this.formBuilder).createForm();
   }
   login(){
      this.router.navigate(['funcionalidades']);

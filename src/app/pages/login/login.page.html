@@ -1,7 +1,7 @@
 
 <ion-content>
 <div class="flex-center">
-  <form [formgroup]="form">
+  <form [formGroup]="form">
   <ion-card>
     <ion-card-header>
       <ion-icon name="arrow-back"></ion-icon>
@@ -17,11 +17,12 @@
         <ion-label position="floating">senha:</ion-label>
         <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
-      <ion-button color="success"  size="full" (click)="login()"><b>Login</b></ion-button>
+      <ion-button color="success"  size="full" (click)="login()">Login</ion-button>
       <ion-button color="success" fill="clear" size="full">Esqueci senha/email</ion-button>
       <ion-button color="success" fill="clear" size="full" (click)="cadastro()">Cadastrar-se</ion-button>
-    </form>
+    
     </ion-card-content>
   </ion-card>
+ </form>
 </div>
 </ion-content>
