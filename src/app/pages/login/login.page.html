@@ -10,14 +10,20 @@
   
     <ion-card-content>
       <ion-item>
-        <ion-label position="floating">email escolar:</ion-label>
+        <ion-label position="floating">email:</ion-label>
         <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
+      <app-error-message  [field]="form.get('email')" message="Email é obrigatório"></app-error-message>
+      
+      <ion-label color="danger" *ngIf="form.get('email').touched && form.get('email').errors?.email">Email invalido</ion-label>
+
       <ion-item>
         <ion-label position="floating">senha:</ion-label>
         <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
-      <ion-button color="success"  size="full" (click)="login()">Login</ion-button>
+      <ion-label color="danger" *ngIf="form.get('password').touched && form.get('password').errors?.required">Senha é obrigatória</ion-label>
+
+      <ion-button color="success"  size="full" [disabled]="!form.valid" (click)="login()">Login</ion-button>
       <ion-button color="success" fill="clear" size="full">Esqueci senha/email</ion-button>
       <ion-button color="success" fill="clear" size="full" (click)="cadastro()">Cadastrar-se</ion-button>
     

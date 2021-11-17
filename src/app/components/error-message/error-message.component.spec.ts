@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormControl, FormGroup } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ErrorMessageComponent } from './error-message.component';
@@ -15,10 +16,18 @@ describe('ErrorMessageComponent', () => {
 
     fixture = TestBed.createComponent(ErrorMessageComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    
   }));
+  //testes
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  //mostrar mensagem de erro, quando o campo é tocado e quando há erro
+
+  it('should show error message on field touche and error present', ()=> {
+    component.field = new FormGroup({email : new FormControl()});
+    component.field.markAsTouched();
+    component.field.setErrors({required:true});
+    expect(component.shouldShowComponent()).toBeTruthy();
+  })
+
+ 
 });
