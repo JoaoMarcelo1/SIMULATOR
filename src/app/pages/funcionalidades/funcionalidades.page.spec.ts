@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import { FuncionalidadesPage } from './funcionalidades.page';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { componentFactoryName } from '@angular/compiler';
 
 describe('FuncionalidadesPage', () => {
   let component: FuncionalidadesPage;
@@ -31,4 +32,13 @@ describe('FuncionalidadesPage', () => {
     component.funcionalidades();
     expect(router.navigate).toHaveBeenCalledWith(['funcionalidades']);
   })
+
+  it('shoud go to meus-dados after button iniciar ', () =>{
+    spyOn(router, 'navigate');
+    component.funcionalidade1();
+    expect(router.navigate).toHaveBeenCalledWith(['meus-dados']);
+  })
+
 });
+   
+  

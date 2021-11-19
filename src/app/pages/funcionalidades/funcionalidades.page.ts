@@ -11,9 +11,13 @@ export class FuncionalidadesPage implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+
   }
   funcionalidades(){
      this.router.navigate(['funcionalidades']);
-
   }
+  funcionalidade1(){
+    this.router.navigate(['meus-dados']);
+  }
+     
 }
