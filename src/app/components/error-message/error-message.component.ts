@@ -10,12 +10,14 @@ export class ErrorMessageComponent implements OnInit {
   //criação de parâmetro
   @Input () message: string;
   @Input() field: FormGroup;
+  @Input() error:string;
+  
   constructor() { }
 
   ngOnInit() {}
   //declarando a função
   shouldShowComponent(){
-    if(this.field.touched && this.field.errors?.required){
+    if(this.field.touched && this.field.errors?.[this.error]){
       return true;
     }
      return false;

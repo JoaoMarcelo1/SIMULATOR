@@ -13,16 +13,15 @@
         <ion-label position="floating">email:</ion-label>
         <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
-      <app-error-message  [field]="form.get('email')" message="Email é obrigatório"></app-error-message>
+      <app-error-message  [field]="form.get('email')" error="required" message="Email é obrigatório"></app-error-message>
+      <app-error-message  [field]="form.get('email')" error="email" message="Email é invalido"></app-error-message>
       
-      <ion-label color="danger" *ngIf="form.get('email').touched && form.get('email').errors?.email">Email invalido</ion-label>
-
       <ion-item>
         <ion-label position="floating">senha:</ion-label>
         <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
-      <ion-label color="danger" *ngIf="form.get('password').touched && form.get('password').errors?.required">Senha é obrigatória</ion-label>
-
+      <app-error-message  [field]="form.get('password')" error="required" message="Senha é obrigatória"></app-error-message>
+      
       <ion-button color="success"  size="full" [disabled]="!form.valid" (click)="login()">Login</ion-button>
       <ion-button color="success" fill="clear" size="full">Esqueci senha/email</ion-button>
       <ion-button color="success" fill="clear" size="full" (click)="cadastro()">Cadastrar-se</ion-button>
