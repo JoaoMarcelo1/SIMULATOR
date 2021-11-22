@@ -33,9 +33,15 @@ describe('FuncionalidadesPage', () => {
     expect(router.navigate).toHaveBeenCalledWith(['funcionalidades']);
   })
 
-  it('shoud go to meus-dados after button iniciar ', () =>{
+  it('shoud go to meus-dados after button meus dados in page funcionalidades', () =>{
     spyOn(router, 'navigate');
     component.funcionalidade1();
+    expect(router.navigate).toHaveBeenCalledWith(['meus-dados']);
+  })
+
+  it('shoud go to tela-jogo after button iniciar ', () =>{
+    spyOn(router, 'navigate');
+    component.funcionalidade2();
     expect(router.navigate).toHaveBeenCalledWith(['meus-dados']);
   })
 

@@ -19,5 +19,8 @@ export class FuncionalidadesPage implements OnInit {
   funcionalidade1(){
     this.router.navigate(['meus-dados']);
   }
+  funcionalidade2(){
+    this.router.navigate(['tela-jogo']);
+  }
      
 }
