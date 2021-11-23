@@ -3,6 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { CadastroPage } from './cadastro.page';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('CadastroPage', () => {
   let component: CadastroPage;
@@ -14,7 +15,8 @@ describe('CadastroPage', () => {
       declarations: [ CadastroPage ],
       imports: [
         IonicModule.forRoot(),
-        AppRoutingModule
+        AppRoutingModule,
+        ReactiveFormsModule
       ]
     }).compileComponents();
 

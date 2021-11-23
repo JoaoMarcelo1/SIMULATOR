@@ -8,6 +8,9 @@
 </ion-header>
 
 <ion-content>
+  <div class="flex-center">
+  <form [formGroup]="form">
+
   <ion-list>
     <ion-item>
       <ion-label>É aluno do IF</ion-label>
@@ -20,17 +23,22 @@
         <ion-input type="nome"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Email:</ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-label position="floating">email:</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
+      <app-error-message  [field]="form.get('email')" error="required" message="Email é obrigatório"></app-error-message>
+      <app-error-message  [field]="form.get('email')" error="email" message="Email é invalido"></app-error-message>
+    
      
       <ion-item>
         <ion-label position="floating">senha:</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password"  formControlName="password"></ion-input>
       </ion-item>
+      <app-error-message  [field]="form.get('password')" error="required" message="Senha é obrigatória"></app-error-message>
+
       <ion-button color="success"  size="full" (click)="cadastro()"><b>Cadastrar</b></ion-button>
 </ion-card-content>
 
-
-
+</form>
+</div>
 </ion-content>
