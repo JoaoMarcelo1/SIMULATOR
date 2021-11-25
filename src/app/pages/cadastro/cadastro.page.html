@@ -8,15 +8,9 @@
 </ion-header>
 
 <ion-content>
-  <div class="flex-center">
+  
   <form [formGroup]="form">
-
-  <ion-list>
-    <ion-item>
-      <ion-label>É aluno do IF</ion-label>
-      <ion-toggle [(ngModel)]="alunodoif"></ion-toggle>
-    </ion-item>
-   </ion-list>  
+  <div class="flex-center">
   <ion-card-content>
       <ion-item>
         <ion-label position="floating">Nome Completo:</ion-label>
@@ -38,7 +32,8 @@
 
       <ion-button color="success"  size="full" (click)="cadastro()"><b>Cadastrar</b></ion-button>
 </ion-card-content>
+</div>
 
 </form>
-</div>
+
 </ion-content>

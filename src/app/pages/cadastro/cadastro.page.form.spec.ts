@@ -1,7 +1,7 @@
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { CadastroPageForm } from "./cadastro.page.form";
 
-describe('LoginPageForm', () => {
+describe('CadastroPageForm', () => {
 
     let loginPageForm: CadastroPageForm;
     let form: FormGroup;
