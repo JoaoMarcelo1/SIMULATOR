@@ -30,7 +30,7 @@
       </ion-item>
       <app-error-message  [field]="form.get('password')" error="required" message="Senha é obrigatória"></app-error-message>
 
-      <ion-button color="success"  size="full" (click)="cadastro()"><b>Cadastrar</b></ion-button>
+      <ion-button color="success"  size="full" [disabled]="!form.valid" (click)="cadastro()"><b>Cadastrar</b></ion-button>
 </ion-card-content>
 </div>
 
