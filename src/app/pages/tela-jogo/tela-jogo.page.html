@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tela-jogo</ion-title>
+  <ion-toolbar color="danger">
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    <ion-title>Pronto para o Desafio?</ion-title>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+<div class="container-fluid">
+     <div class="row">
+        <div class="onoff">
+            <ion-label class="centrar_onoff"> On/Off </ion-label>            
+            <ion-toggle [(ngModel)]="OnOff"></ion-toggle>
+        </div> 
+     </div>
+</div>
+
+
+
+
+
 </ion-content>
+   
+    
+  
+
