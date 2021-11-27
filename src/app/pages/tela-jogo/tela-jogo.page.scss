@@ -1,19 +1,15 @@
-.onoff{
-
-
- width: 30%;
- padding: 15px;
- margin: 10px;
- align-items: center;
- background-color: yellow;
- font-size:  ;
-
- .centrar_onoff{
-    text-align: center;
+.ajuste-onoff{
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
 }
 
- 
+.ajuste-pontuação{
+    background-color: red;
+    display: flex;
+    align-items: center;
 }
+
 
 
 
