@@ -14,13 +14,12 @@
 <ion-grid>
     <ion-row>
         <ion-col class="ajuste-onoff" size="5">
-            <ion-label> ON/OFF </ion-label>            
+        <ion-label> ON/OFF </ion-label>            
             <ion-toggle [(ngModel)]="OnOff"></ion-toggle>
-         </ion-col>
-
-         <ion-col class="ajuste-pontuação" size="7">
-           <ion-label> PONTUAÇÃO:</ion-label>
-         </ion-col>
+        </ion-col>
+        <ion-col class="ajuste-pontuação" size="7">
+            <ion-label> PONTUAÇÃO:</ion-label>
+        </ion-col>
     </ion-row>
 
     <ion-row>
@@ -29,21 +28,45 @@
             <ion-label>Hardware</ion-label>
             <ion-radio value="griff"></ion-radio>
          </ion-col>
-
          <ion-col class="ion-align-self-end" size="12">
           <ion-icon name="logo-windows" class="icone"></ion-icon>
             <ion-label>   Sofware</ion-label>
             <ion-radio></ion-radio>
-         </ion-col>
+         </ion-col> 
     </ion-row>
+
     <ion-row>
       <ion-col class="ajuste-defeito" size="12">
-         <ion-label>Defeito: O Pc não é inicializado</ion-label>
-         
+         <ion-label>Defeito: O Pc não é inicializado</ion-label>        
       </ion-col>
-
-
     </ion-row>
+
+    <div class="question-box">...
+      <ion-label> caixa de texto onde estará a questão</ion-label>
+    </div>
+
+    <div class="respostas"> 
+      <span>1</span>
+      <span>texto da questao</span>
+    </div>
+    
+    <div class="respostas"> 
+      <span>1</span>
+      <span>texto da questao</span>
+    </div>
+
+    <div class="respostas"> 
+      <span>1</span>
+      <span>texto da questao</span>
+    </div>
+
+    <div class="respostas"> 
+      <span>1</span>
+      <span>texto da questao</span>
+    </div>
+
+
+    
 </ion-grid>
 
 </ion-content>
