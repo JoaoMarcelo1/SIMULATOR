@@ -39,6 +39,39 @@ ion-content{
   
 }
 
+.respostas{
+
+
+  .resposta{
+    padding: {
+      left: 5px;
+      right: 5px;
+    };
+    width: 100%;
+    border-radius: 4px;
+    background-color: yellow;
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    };
+    padding: 8px;
+    display: flex;
+    align-items: center;
+
+    .numero{
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      background-color: yellowgreen;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+  }
+
+}
+
 
 
 
