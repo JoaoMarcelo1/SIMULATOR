@@ -43,11 +43,13 @@
 
     <div class="question-box">...
       <ion-label> caixa de texto onde estará a questão</ion-label>
+      <p>{{ curQuesion.title }}</p>
     </div>
 
 
     <div class="respostas">
     <div class="resposta"> 
+      <div (click)="doAnswer(answer)" *ngFor="let answer of curQuesion.answers; let n = index;" class="ion-activatable ion-focusable hydrated"></div>
       <span class="numero">1</span>
       <span class="texto-resposta">opção</span>
     </div>
