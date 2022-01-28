@@ -24,16 +24,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/funcionalidades/funcionalidades.module').then( m => m.FuncionalidadesPageModule)
   },
   {
-    path: 'ranking',
-    loadChildren: () => import('./pages/ranking/ranking.module').then( m => m.RankingPageModule)
-  },
-  {
     path: 'meus-dados',
     loadChildren: () => import('./pages/meus-dados/meus-dados.module').then( m => m.MeusDadosPageModule)
   },
   {
     path: 'tela-jogo',
     loadChildren: () => import('./pages/tela-jogo/tela-jogo.module').then( m => m.TelaJogoPageModule)
+  },
+  {
+    path: 'product/:id',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
   }
 ];
 
