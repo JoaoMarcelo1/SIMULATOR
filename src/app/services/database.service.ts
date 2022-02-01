@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class DatabaseService {
 
-  constructor() { }
+  constructor(private sqlite: SQLite) {}
+
+  public getDB() {
+    return this.sqlite.create({
+      name: 'products.db',
+      location: 'default'
+    });
+  }
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SQLite} from '@ionic-native/sqlite'
 
 import { environment } from "src/environments/environment";
 
@@ -20,7 +21,12 @@ import { environment } from "src/environments/environment";
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+  {provide: LOCALE_ID, useValue: 'pt-BR'},
+  {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+   SQLite
+  
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
