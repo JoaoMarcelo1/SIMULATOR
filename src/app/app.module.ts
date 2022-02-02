@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { SQLite } from '@ionic-native/sqlite'
+import { LoginService } from './login.service';
 
 
 
@@ -25,7 +26,8 @@ import { SQLite } from '@ionic-native/sqlite'
   providers: [
   {provide: LOCALE_ID, useValue: 'pt-BR'},
   {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-   SQLite
+   SQLite,
+   LoginService
   
   ],
   bootstrap: [AppComponent],
