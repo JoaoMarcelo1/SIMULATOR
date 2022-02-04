@@ -8,8 +8,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
-import { SQLite } from '@ionic-native/sqlite'
 import { LoginService } from './login.service';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms'
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {firebaseConfig} from '../environments/environment';
+
 
 
 
@@ -21,12 +26,18 @@ import { LoginService } from './login.service';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+     AngularFireModule.initializeApp(firebaseConfig),
+     AngularFireAuthModule,
+     AngularFirestoreModule,
+  
   ],
   providers: [
   {provide: LOCALE_ID, useValue: 'pt-BR'},
   {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-   SQLite,
+   
    LoginService
   
   ],
