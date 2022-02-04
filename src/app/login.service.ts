@@ -4,7 +4,10 @@ import firebase from 'firebase/app'
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class AuthService {
+  loginFireauth(value: any) {
+    throw new Error("Method not implemented.");
+  }
 
   constructor(public auth : AngularFireAuth) { }
 
