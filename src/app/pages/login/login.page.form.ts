@@ -8,7 +8,7 @@ export class LoginPageForm{
 
   private formBuilder : FormBuilder;
 
-  constructor(formBuilder : FormBuilder, public authservice: AuthService){
+  constructor(formBuilder : FormBuilder){
     this.formBuilder = formBuilder;
 
   }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/login.service';
+import { User } from 'src/app/interfaces/user';
+import { databaseService } from 'src/app/services/database.service';
 import { LoginPageForm } from './login.page.form';
 
 @Component({
@@ -11,7 +12,10 @@ import { LoginPageForm } from './login.page.form';
 })
 export class LoginPage implements OnInit {
    form: FormGroup;
-  constructor(private router: Router , private formBuilder: FormBuilder, public LoginService: LoginService ) { }
+   public  userlogin: User = {};
+   public  usercadastro: User={};
+  constructor(private router: Router , private formBuilder: FormBuilder, private DatabaseService: databaseService ) {
+     }
   
   //métodos 
   ngOnInit() {
@@ -26,18 +30,12 @@ export class LoginPage implements OnInit {
   cadastro(){
     this.router.navigate(['cadastro']);
   }
-  LoginUser(value){
-    console.log("usuário logado");
-    try{
-      this.LoginService.loginfireauth(value).then( resp =>{
-       console.log(resp);
-
-      })
-    }catch(err){
-
-      console.log(err);
-    }
   
+  loginauth(){
+   console.log(this.userlogin);
+  }
 
+  cadastroauth(){
+    
   }
 }
