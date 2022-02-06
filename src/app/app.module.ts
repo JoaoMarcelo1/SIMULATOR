@@ -8,12 +8,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from './login.service';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
-import { AngularFireAuthModule} from '@angular/fire/auth';
-
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,16 +24,16 @@ import { AngularFireAuthModule} from '@angular/fire/auth';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-     AngularFireModule.initializeApp(environment.firebase),
-     AngularFireAuthModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
+
      
   ],
 
   providers: [
   {provide: LOCALE_ID, useValue: 'pt-BR'},
   {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-   
-   AuthService
    
   
   ],

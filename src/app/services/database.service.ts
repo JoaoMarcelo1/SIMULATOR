@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { User } from '../interfaces/user';
 import { AngularFireAuth } from '@angular/fire/auth';
 

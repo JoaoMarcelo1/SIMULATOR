@@ -31,8 +31,15 @@ export class LoginPage implements OnInit {
     this.router.navigate(['cadastro']);
   }
   
-  loginauth(){
+  async loginauth(){
    console.log(this.userlogin);
+
+    try {
+      await this.DatabaseService.login(this.userlogin);
+    } catch (error) {
+      console.error(error);
+
+    }
   }
 
   cadastroauth(){
