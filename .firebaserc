@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simulator-19564": {
+      "hosting": {
+        "app": [
+          "simulator-19564"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simulator-19564"
+  }
+}
