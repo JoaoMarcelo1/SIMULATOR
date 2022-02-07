@@ -10,8 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule , } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule , } from '@angular/fire/compat/firestore';
 import { Keyboard } from '@awesome-cordova-plugins/keyboard/ngx';
 
 @NgModule({
