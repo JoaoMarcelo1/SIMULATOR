@@ -1,4 +1,4 @@
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule , } from '@angular/fire/compat/firestore';
 import { Keyboard } from '@awesome-cordova-plugins/keyboard/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,7 +33,6 @@ import { Keyboard } from '@awesome-cordova-plugins/keyboard/ngx';
   ],
 
   providers: [
-  {provide: LOCALE_ID, useValue: 'pt-BR'},
   {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
    Keyboard,
    
