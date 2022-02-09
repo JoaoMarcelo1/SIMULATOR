@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Keyboard } from '@awesome-cordova-plugins/keyboard/ngx';
 import { User } from 'src/app/interfaces/user';
 import { databaseService } from 'src/app/services/database.service';
 import { LoginPageForm } from './login.page.form';
@@ -14,7 +15,13 @@ export class LoginPage implements OnInit {
    form: FormGroup;
    public  userlogin: User = {};
    public  usercadastro: User={};
-  constructor(private router: Router , private formBuilder: FormBuilder, private DatabaseService: databaseService ) {
+  constructor(
+    private router: Router , 
+    private formBuilder: FormBuilder, 
+    private DatabaseService: databaseService,
+    public  keyboard : Keyboard
+    
+    ) {
      }
   
   //métodos 
@@ -35,7 +42,7 @@ export class LoginPage implements OnInit {
    console.log(this.userlogin);
 
     try {
-      await this.DatabaseService.login(this.userlogin);
+      await this.DatabaseService.loginauth(this.userlogin);
     } catch (error) {
       console.error(error);
 
